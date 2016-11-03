@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, user-scalable=no" name="viewport">
+        <link type="text/css" href="esteelos.css" rel="stylesheet">
+        <script type="text/javascript" src="funciones.js"></script>
+    </head>
+    <body>
+        <div id="mapa2">
+            
+        </div>
+        <div id="datos">
+           <h2>Registrar Nuevo Lugar</h2>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <textarea name="descripcion" id="descripcion" placeholder="Describelo putito"></textarea>
+            <select id="opcion">
+                <option>Come</option>
+                <option>Pistea</option>
+                <option>Cotorrea</option>
+            </select>
+            <p>Presupuesto $<input type="number" id="presupuesto"><br>
+            Horario <input type="time" id="horario" placeholder="Horario"> - 
+            <input type="time" id="horario" placeholder="Horario2"></p>
+            <button>Guardar</button>
+        </div>
+        
+    </body>
+    <script>
+        window.addEventListener('load', localizar, true);
+                                
+        function localizar(){
+            //Obtener la geolocalización
+            navigator.geolocation.getCurrentPosition(ubicacion);
+        }
+        
+        function ubicacion(datos){
+            longitud = datos.coords.longitude;
+            latitud = datos.coords.latitude;
+            initMap();
+        }
+            
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('mapa2'), {
+                center: {lat: latitud, lng: longitud},
+                zoom: 18
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: latitud, lng: longitud},
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: 'Mi posición',
+                draggable: true,
+                label: 'Aquí estás maifren'
+            });
+        }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWxEHMYE5aUzzQ8hBy40Xjij1Tqx-AH5E">
+    </script>
+</html>

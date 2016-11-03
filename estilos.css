@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+}
+
+body{
+    background: -webkit-linear-gradient(#1565C0, #7986CB) !important;
+    
+}
+
+#inicio{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    background: rgba(179,229,252,.5);
+    z-index: 999;
+    top: 10%;
+    position: fixed;
+}
+
+#inicio>input{
+    width: 80%;
+    height: 40px;
+    font-size: 1.2em;
+    background: rgba(3,155,229,.8);
+    margin-left: 10%;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+
+#inicio>button{
+    width: 50%;
+    height: 40px;
+    background: rgba(0,191,165,.8);
+    margin-left: 25%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+#signup{
+    margin-bottom: 10px;
+}
+
+h2, h3{
+    text-align: center;
+    color: white;
+}
+
+#chela{
+    height: 50%;
+    width: 100%;
+    margin-top: 80%;
+    position: fixed;
+    filter: blur(5px);
+}
+
+#registro{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    background: rgba(179,229,252,.5);
+    z-index: 999;
+    top: 10%;
+    position: fixed;
+}
+
+#registro>input{
+    width: 80%;
+    height: 40px;
+    font-size: 1.2em;
+    background: rgba(3,155,229,.8);
+    margin-left: 10%;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+
+#registro>button{
+    width: 50%;
+    height: 40px;
+    background: rgba(0,191,165,.8);
+    margin-left: 25%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+#mapa{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+#botonera{
+    float: left;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: transparent;
+}
+
+#botonMenu{
+    position: fixed;
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    left: 10px;
+    top: 10px;
+    z-index: 99999;
+}
+
+#botonera>button{
+    width: 70%;
+    height: 50px;
+    background: rgba(0,191,165,.8);
+    margin-left: 15%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 2em;
+    margin-top: 5px;
+    border-radius: 25px;
+}
+
+#mapa2     {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    float: left;
+    width: 100%;
+    height: 200px;
+}
+
+
+#datos{
+    height: calc(100% - 250px);
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    background: rgba(179,229,252,.5);
+    z-index: 999;
+    top: 225px;
+    position: fixed;
+    color: white;
+}
+
+#datos>#nombre, #opcion{
+    width: 80%;
+    height: 40px;
+    font-size: 1.2em;
+    background: rgba(3,155,229,.8);
+    margin-left: 10%;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+#datos>#descripcion{
+    width: 80%;
+    height: 100px;
+    font-size: 1em;
+    background: rgba(3,155,229,.8);
+    margin-left: 10%;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+#datos>p>#presupuesto, #horario{
+    width: 25%;
+    height: 40px;
+    font-size: 1.2em;
+    background: rgba(3,155,229,.8);
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+#datos>p{
+    font-size: 1.2em;
+    margin-left: 10%;
+}
+
+#datos>button{
+    width: 50%;
+    height: 40px;
+    background: rgba(0,191,165,.8);
+    margin-left: 25%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 10px;
+    border-radius: 25px;
+}

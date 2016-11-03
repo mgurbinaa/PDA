@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, user-scalable=no" name="viewport">
+        <link type="text/css" href="esteelos.css" rel="stylesheet">
+        <script type="text/javascript" src="funciones.js"></script>
+    </head>
+    <body>
+        <div id="menu">
+            
+        </div>
+        
+        <div id="botonMenu">
+            <button><img src="Images/1477448771_Hamburger_Round.svg"></button>
+        </div>
+        
+        <div id="mapa">
+            
+        </div>
+        <div id="botonera">
+            <button onclick="window.location.assign('ubicacion.html')">Guardar Lugar</button>
+        </div>
+        
+    </body>
+    <script>
+        window.addEventListener('load', localizar, true);
+                                
+        function localizar(){
+            //Obtener la geolocalización
+            navigator.geolocation.getCurrentPosition(ubicacion);
+        }
+        
+        function ubicacion(datos){
+            longitud = datos.coords.longitude;
+            latitud = datos.coords.latitude;
+            initMap();
+        }
+            
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('mapa'), {
+                center: {lat: latitud, lng: longitud},
+                zoom: 15
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: latitud, lng: longitud},
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: 'Mi posición',
+                draggable: true,
+                label: 'Aquí estás maifren'
+            });
+        }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWxEHMYE5aUzzQ8hBy40Xjij1Tqx-AH5E">
+    </script>
+</html>
